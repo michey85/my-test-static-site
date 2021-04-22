@@ -11,7 +11,9 @@ export default function Post() {
             <br />
             <h3>{post.fields.name}</h3>
             <p>{post.fields.description}</p>
-            <img src={post.fields.featuredImage.fields.file.url} />
+            {post.fields.featuredImage && (
+                <img src={post.fields.featuredImage.fields.file.url} />
+            )}
         </div>
     );
 }

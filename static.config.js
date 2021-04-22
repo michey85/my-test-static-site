@@ -12,12 +12,8 @@ client.getEntries();
 
 export default {
     getRoutes: async () => {
-        const { data: posts } = await axios.get(
-            'https://jsonplaceholder.typicode.com/posts'
-        );
-
         const { items } = await client.getEntries();
-        console.log(items);
+
         return [
             {
                 path: '/blog',
