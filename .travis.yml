@@ -6,11 +6,4 @@ install:
     - yarn
 script:
     - yarn build
-
-deploy:
-    provider: vercel
-    skip-cleanup: true
-    vercel-token: $VERCEL_TOKEN
-    local_dir: dist
-    on:
-        branch: master
+    - yarn deploy -- --token $VERCEL_TOKEN
